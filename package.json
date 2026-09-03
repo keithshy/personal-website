@@ -5,7 +5,8 @@
   "source": "src/index.hbs",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "test": "echo 'todo'"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.16.4",
