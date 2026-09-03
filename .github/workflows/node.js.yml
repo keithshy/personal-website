@@ -32,6 +32,11 @@ jobs:
       - run: ls -lR
       - shell: bash
         env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+        run: |
+          echo "$SSH_KEY" > id_github
+      - shell: bash
+        env:
           DESTINATION: ${{ secrets.DESTINATION1 }}
         run: |
-          scp dist/* "$DESTINATION"
+          scp -o "StrictHostKeyChecking no" -i id_github dist/* "$DESTINATION"
