@@ -23,10 +23,14 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
-      - uses: actions/upload-artifact@v7
-          id: artifact-upload-step
-          with:
-            name: dist
-            path: dist
-            archive: false
-      - run: scp dist/* ${{ secrets.destination1 }}
+      # - uses: actions/upload-artifact@v7
+      #   id: artifact-upload-step
+      #   with:
+      #     name: dist
+      #     path: dist
+      - run: ls -lR
+      - shell: bash
+        env:
+          DESTINATION: ${{ secrets.DESTINATION1 }}
+        run: |
+          scp dist/* "$DESTINATION"
