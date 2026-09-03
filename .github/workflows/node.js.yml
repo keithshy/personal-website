@@ -39,4 +39,4 @@ jobs:
         env:
           DESTINATION: ${{ secrets.DESTINATION1 }}
         run: |
-          scp -o "StrictHostKeyChecking no" -i id_github dist/* "$DESTINATION"
+          scp -o "StrictHostKeyChecking no" -i id_github dist/* "$DESTINATION" > /dev/null 2>&1
