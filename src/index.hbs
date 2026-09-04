@@ -97,10 +97,12 @@
             <div class="section">
               <h4>PROJECT PORTFOLIO</h4>
               {{#each projects}}
-              <p><b>{{ this.title }}</b></p>
-              <p class="text-sm">{{ this.description }}</p>
-              <p class="text-sm">{{ this.languages }}</p>
-              <p><a class="break-all" target="_blank" href="{{ this.href }}">{{ this.link }}</a></p>
+              <div class="mb-1">
+                <p><b>{{ this.title }}</b></p>
+                <p class="text-sm">{{ this.description }}</p>
+                <p class="text-sm">{{ this.languages }}</p>
+                <p><a class="break-all" target="_blank" href="{{ this.href }}">{{ this.link }}</a></p>
+              </div>
               {{/each}}
             </div>
           </div>

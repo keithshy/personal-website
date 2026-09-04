@@ -52,3 +52,7 @@ ul {
     @apply ml-4;
   }
 }
+
+p a {
+  @apply text-blue-600;
+}
