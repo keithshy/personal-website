@@ -2,7 +2,9 @@
   "name": "parcel-vanilla-starter",
   "private": true,
   "version": "0.0.0",
-  "source": "src/index.hbs",
+  "source": [
+    "src/resume.hbs"
+  ],
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
