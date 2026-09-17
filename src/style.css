@@ -36,6 +36,13 @@
   }
 }
 
+.sidebar {
+  background: #e8eff5;
+  /* Preserve background when printing */
+  -webkit-print-color-adjust: exact;  /* Chrome/Safari/Edge/Opera */
+  color-adjust: exact;  /* Firefox */
+}
+
 ul {
   @apply list-disc;
 
@@ -51,4 +58,32 @@ ul {
   li {
     @apply ml-4;
   }
+}
+
+p a {
+  @apply text-blue-600;
+}
+
+@media screen {
+  .print-only {
+    display: none;
+  }
+}
+
+@media print {
+  .print-only {
+    display: unset;
+  }
+
+  .md\:flex-row {
+    flex-direction: unset !important;
+  }
+
+  * {
+    font-size: 12px;
+  }
+}
+
+@page {
+  margin: 25px;
 }
